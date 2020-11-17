@@ -16,3 +16,12 @@ But then the thing everybody want to know the accuracy. After optimizing the lea
 This is because i didn't have a good test dataset so i had to use the original one so basicaly it is kindeof bad...
 
 Well hope this could help you in a way.
+
+# further usage
+
+if you want to test it with you're own images (i doubt you will) then do as follows in the <a href="https://github.com/4C4F4943/me_learning_neur_net/blob/main/load_in.py">load_in.py</a> where you use the already optimized weights(w.pickle) and bias.
+```python
+test_x = cv2.imread("[YOU'RE OWN IMAGE]",cv2.IMREAD_GRAYSCALE)
+test_x = cv2.resize(test_x,(IMG_SIZE,IMG_SIZE))
+
+```
