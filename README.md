@@ -1,6 +1,22 @@
+## First off a quick note:
+<pre font-weight="bold" font-size="50%">
+ ____ _________ ____ ____ ____ ____ ____ _________ ____ ____ ____ ____ 
+||I |||       |||d |||o |||n |||' |||t |||       |||k |||n |||o |||w ||
+||__|||_______|||__|||__|||__|||__|||__|||_______|||__|||__|||__|||__||
+|/__\|/_______\|/__\|/__\|/__\|/__\|/__\|/_______\|/__\|/__\|/__\|/__\|
+ ____ ____ ____ ____ _________ ____ ____ ____ 
+||w |||h |||a |||t |||       |||i |||' |||m ||
+||__|||__|||__|||__|||_______|||__|||__|||__||
+|/__\|/__\|/__\|/__\|/_______\|/__\|/__\|/__\|
+ ____ ____ ____ ____ ____ ____ ____ ____ 
+||d |||o |||i |||n |||g |||. |||. |||. ||
+||__|||__|||__|||__|||__|||__|||__|||__||
+|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|
+
+ </pre>
 # Me learning neural networks
 
-Hello this is very bad neural network to detect a dog or a cat. 
+Hello this is very bad neural network to detect a dog or a cat. It uses the most basic functions for machine learning so yeah. 
 
 If you want to run through the training part yourselft with the images and everything get the dataset from <a href = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=54765">microsoft petImages</a>.
 Else you can also just use the .pickle files where i have stored the compressed dataset which is already shuffled.
