@@ -4,6 +4,8 @@ import numpy as np
 import random
 import time
 
+
+######################## this is just a program where i learned to understand it better ##############################
 start = time.time()
 def sigmoid(x):
     return 1/(1 + np.exp(-x))
@@ -13,6 +15,8 @@ def init_thing(one_thing):
     w = np.random.randn(one_thing,1) * 0.01
     b = 0
     return w,b
+
+############# just makes random data ###################
 def make_data():
     train_x = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
     train_y = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
@@ -44,7 +48,7 @@ def best_fit_slope(xs,ys):
     m = (((mean(xs)*mean(ys)) - mean(xs*ys)) /((mean(xs)**2) - mean(xs**2)))
     b = mean(ys) - m * mean(xs)
     return m,b
- 
+
 def gradient_descent(w,b,X,Y,iterations, learning_rate):
     costs = []
     for i in range(iterations):
@@ -59,6 +63,7 @@ def gradient_descent(w,b,X,Y,iterations, learning_rate):
     params = {"w":w, "b":b}
     return params, costs
 
+############# it can't really predict anything ##################
 def predict(w,b,X,m):
     #m = X.shape(1)
     y_pred = np.zeros((1, m))

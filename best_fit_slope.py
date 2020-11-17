@@ -3,7 +3,7 @@ from statistics import mean
 import numpy as np
 import random
 import time
-
+############## this is a function that calculates the best fit slope and then plots it at the end #############
 def best_fit_slope(xs,ys):
     m = (((mean(xs)*mean(ys)) - mean(xs*ys)) /((mean(xs)**2) - mean(xs**2)))
     b = mean(ys) - m * mean(xs)

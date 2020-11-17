@@ -7,32 +7,32 @@ import time
 import matplotlib.pyplot as plt 
 
 start = time.time()
+################ load in youre optimized weights ###############
 pickle_in = open("w.pickle","rb")
 w = pickle.load(pickle_in)
 
-#pickle_in = open("b.pickle","rb")
-#b = pickle.load(pickle_in)
+########## define youre bias value ###################
 b = np.float(-0.004794084986625586)
 IMG_SIZE = 50
-#n = input("enter in the number of the foto: ")
-#PetImages/Cat/12031.jpg
-#test_x = cv2.imread(os.path.join("12502copy.jpg"),cv2.IMREAD_GRAYSCALE)
-#test_x = cv2.imread("PetImages/Dog/11626.jpg",cv2.IMREAD_GRAYSCALE)
-test_x = cv2.imread("12505.jpeg",cv2.IMREAD_GRAYSCALE)
+
+test_x = cv2.imread("test_cat_img.jpg",cv2.IMREAD_GRAYSCALE)
 test_x = cv2.resize(test_x,(IMG_SIZE,IMG_SIZE))
+
+######### to see the resized img #############
 #plt.imshow(test_x)
 #plt.show()
+
 test_x = np.array(test_x).reshape(-1, IMG_SIZE, IMG_SIZE,1)
 test_x = test_x.reshape(test_x.shape[0], -1).T
 test_x/255
+
 print("test_x.shape: ",test_x.shape)
 print("w.shape: ",w.shape)
 print("b: ",b)
 
 what_is = ["cat", "dog"]
+
 def sigmoid(z):
-    e = math.e
-    #return 1/(1+e*np.exp(-z)) 
     return 1/(1 + np.exp(-z))   
 
 def predict(w, b, X):    
