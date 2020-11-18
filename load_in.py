@@ -51,6 +51,7 @@ def predict(w, b, X):
     print("1y_pred.shape: ",y_pred.shape)
     return y_pred, A
 
+########## a 0 is a cat a 1 is a dog ###########
 
 y_pred,a = predict(w,b,test_x)
 res = int(y_pred[0])
