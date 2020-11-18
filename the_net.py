@@ -7,6 +7,8 @@ import random
 import pickle
 import time
 DATADIR = "PetImages"
+
+########## if the net returns a 0 it is a cat if it returns a dog it return a 1 ##########
 CATEGORIES = ["Cat","Dog"]
 start = time.time()
 
@@ -60,7 +62,7 @@ pickle_out = open("Y.pickle","wb")
 pickle.dump(Y, pickle_out)
 pickle_out.close()
 """
-########### load in the data ##############
+########### load in the data  through the .pickle files ##############
 pickle_in = open("X.pickle","rb")
 X = pickle.load(pickle_in)
 X = X[:5000]
@@ -80,6 +82,7 @@ test_x = np.array(test_x)
 test_y = np.array(test_y)
 
 Y = np.array(Y)
+##### these are just here for debugging purposes #####
 print(Y.shape)
 print(X.shape, test_x.shape)
 
@@ -87,11 +90,12 @@ print("the shape of X: ",X.shape)
 print("the shape of Y: ",Y.shape)
 print("the shape of test X: ",test_x.shape)
 print("the shape of test Y: ",test_y.shape)
+
 ########### squish the data ################
 X = X/255
 test_x = test_x/255
 
-####### this funtion should return a value between 0 and 1 to decide whether it is a cat or a dog ################
+####### this funtion should return a value between 0 and 1 to so the nueral net can decide whether it is a cat or a dog ################
 def sigmoid(z):
     #e = math.e
     #return 1/(1+e*np.exp(-z))
@@ -103,6 +107,7 @@ def initialize_parameters(dim):
     w = np.random.randn(dim, 1)*0.01
     b = 0
     return w, b
+
 ############# propagation refines the weights and biases ##############
 def propagate(w, b, X, Y):
 
@@ -118,6 +123,7 @@ def propagate(w, b, X, Y):
 
     grads = {"dw": dw,"db": db} 
     return grads, cost
+
 ############ some more optimizing the weights and bias #################
 def gradient_descent(w, b, X, Y, iterations, learning_rate):
     costs = []
@@ -134,7 +140,8 @@ def gradient_descent(w, b, X, Y, iterations, learning_rate):
     params = {"w": w,"b": b}   
     #plt.plot(params["w"][:10]) 
     return params, costs
-############## the function that predicts if it is a cat or a dog ##############
+
+############## the function that predicts if it is a cat or a dog or gives you the index result ##############
 def predict(w, b, X):    
     # number of example
     m = X.shape[1]
@@ -182,11 +189,6 @@ def model(train_x, train_y, test_x, test_y, iterations, learning_rate):
 
     print("Train Acc: {} %".format(100 - np.mean(np.abs(train_pred_y - train_y)) * 100))
     print("Test Acc: {} %".format(100 - np.mean(np.abs(test_pred_y - test_y)) * 100))
-    how_many =0
-    for i in range(len(train_pred_y[0])):
-        if train_pred_y[0][i] == 1.0:
-            how_many+=1
-            #print("it's a cat!",how_many)
     return costs
 
 costs = model(X,Y,test_x,test_y,iterations=1000, learning_rate=0.0160)
