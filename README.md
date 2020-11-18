@@ -38,11 +38,15 @@ Well hope this could help you in a way.
 
 # further usage
 
-if you want to test it with you're own images (i doubt you will) then do as follows in the <a href="https://github.com/4C4F4943/me_learning_neur_net/blob/main/load_in.py">load_in.py</a> where you use the already optimized weights(w.pickle) and bias.
+If you want to test it with you're own images (i doubt you will) then do as follows in the <a href="https://github.com/4C4F4943/me_learning_neur_net/blob/main/load_in.py">load_in.py</a> where you use the already optimized weights(w.pickle) and bias.
 ```python
 test_x = cv2.imread("[YOU'RE OWN IMAGE]",cv2.IMREAD_GRAYSCALE)
 test_x = cv2.resize(test_x,(IMG_SIZE,IMG_SIZE))
 
+```
+And if you want to play around with the iterations and the learning rate you can do that in <a href="https://github.com/4C4F4943/me_learning_neur_net/blob/main/the_net.py">the_net.py</a> as follows:
+```python
+costs = model(X,Y,test_x,test_y,iterations=1000, learning_rate=0.0160)
 ```
 Well that seems to be all. I hope it is somewhat usefull in any way. 
 I got the ascii text from pyfiglet with the font smkeyboard:)
