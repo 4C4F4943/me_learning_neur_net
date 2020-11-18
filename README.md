@@ -44,3 +44,4 @@ test_x = cv2.imread("[YOU'RE OWN IMAGE]",cv2.IMREAD_GRAYSCALE)
 test_x = cv2.resize(test_x,(IMG_SIZE,IMG_SIZE))
 
 ```
+I got the ascii text from pyfiglet with the font smkeyboard:)
