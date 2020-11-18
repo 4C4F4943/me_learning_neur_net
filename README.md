@@ -16,10 +16,13 @@
  </pre>
 # Me learning neural networks
 
-Hello this is very bad neural network to detect a dog or a cat. It uses the most basic functions for machine learning so yeah. 
+Hello this is very bad neural network to detect a dog or a cat. It uses the most basic functions for machine learning and it doesn't have any hidden layers so yeah. 
 
-If you want to run through the training part yourselft with the images and everything get the dataset from <a href = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=54765">microsoft petImages</a>.
-Else you can also just use the .pickle files where i have stored the compressed dataset which is already shuffled.
+If you want to run through the training part yourselft with the images and everything get the dataset from <a href = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=54765">microsoft petImages</a> and the code should just be commented out but you will need to enter youre own path to the PetImages directory as follows.
+```python
+DATADIR = "[enter in youre own relative path to the directory]"
+```
+but if you don't want to do that you can also just use the .pickle files where i have stored the compressed dataset which is already shuffled.
 # Is it good?
 No it isn't but it did give me a better understanding of how neural networks work.
 Here you can the the graph of the cost and if i must say so myself it does look pretty nice.
