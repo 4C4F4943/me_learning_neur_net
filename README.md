@@ -30,7 +30,7 @@ Here you can see the graph of the cost and if i must say so myself it does look 
 <img src="https://github.com/4C4F4943/me_learning_neur_net/blob/main/cost_plot.png" width="40%" height="40%">
 
 But then the thing everybody want to know the accuracy. After optimizing the learning rate and the iterations to a whopping <br>
-120 000(yes the graph isn't the right one) i got a trian accuracy of about 80% and a test accuracy of about the same.
+120 000(yes the graph isn't the right one) i got a train accuracy of about 80% and a test accuracy of about the same.
 
 This is because i didn't have a good test dataset so i had to use the original one so basicaly it is bad...
 
